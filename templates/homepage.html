@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    html{
+      margin: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: "Helvetica";
+      /* padding: 20px; */
+      height: 100%;
+      display: flex;
+      /* background-image: url('vivumlogo_1.png');
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position: center;  */
+      /* backdrop-filter: blur(5px); */
+      background-color: #000000;
+      /* background-image: linear-gradient(to right, black, #696969); */
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    label {
+      font-size: 40px;
+      /* color: white; */
+    }
+
+    .header {
+      color: white;
+      font-size: 100px;
+    }
+
+    .space {
+      /* height: 120px; */
+    }
+
+    input {
+      font-size: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      text-align: center;
+      width: 50%;
+      height: 70px;
+      outline: none;
+      box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .form {
+      padding: 20px;
+      color: white;
+      /* border: 3px solid black; */
+      border-radius: 30px;
+      /* background-color: #ffffff; */
+      /* background-image: url('tigerprint.png'); */
+    }
+
+    .free-space {
+      width: 600px;
+      flex: auto;
+    }
+
+    .main-body {
+      flex: auto;
+    }
+
+    button {
+      font-size: 25px;
+      background: white;
+      text-decoration: none;
+      outline: none;
+      border: 1px solid white;
+      border-radius: 8px;
+      font-weight: 100;
+      /* width: 400px; */
+    }
+
+    .text {
+      text-align: center;
+      color: white;
+      /* width: 700px; */
+      display: flex;
+      /* background-color: white; */
+    }
+
+    .more-space {
+      flex: auto;
+      width: 30%;
+    }
+
+    .bg-image {
+      background-image: url("{{url_for('static', filename='diya_tiger_transparency.png')}}");
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: center;
+      /* -webkit-filter: blur(5px); */
+      width: 100%;
+    }
+
+    .blur {
+      backdrop-filter: blur(1px);
+    }
+
+    .error{
+      font-weight: bold;
+      color: red;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  </style>
+  <title>VIVUM Registration</title>
+</head>
+
+<body>
+  <div class="bg-image">
+    <div class="blur">
+      <div class="free-space"></div>
+      <div class="main-body">
+        <div class="header"> <img src="{{url_for('static', filename='1_edited.png')}}" alt="vivum"> </div>
+        <div class="space" style="height: 150px;"></div>
+        <div class="form">
+          <form action="/forms" method="post" style="text-align: center;">
+            <label><b>School Code</b></label> <br><br>
+            <input name="code" type="text"></input><br><br>
+            <div class='error'>{{error_message}}</div>
+            <button type="submit">
+              <div style="padding: 10px;">Submit</div>
+            </button>
+          </form>
+        </div>
+        <div class="space" style="height: 100px;"></div>
+        <div class="text">
+          <div class="more-space"></div>
+          <div style="flex:auto">
+            If you are not registered for VIVUM, please send us a mail at vivum20@tisb.ac.in asking for your school to be registered.
+          </div>
+          <div class="more-space"></div>
+        </div>
+      </div>
+      <div class="free-space"></div>
+    </div>
+  </div>
+</body>
+
+</html>

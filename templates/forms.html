@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>VIVUM Registration Forms</title>
+  <style>
+    @font-face {
+      font-family: luloClean;
+      src: url({{url_for('static', filename='lulo_clean.ttf')}});
+    }
+
+    body {
+      padding: 20px;
+      font-family: Avenir;
+      background-color: black;
+      /* background-image: linear-gradient(black, #DC3B32); */
+    }
+
+    .body {
+      display: flex;
+    }
+
+    .free-space {
+      flex: auto;
+      width: 20%;
+    }
+
+    .space {
+      flex: auto;
+      width: 20%;
+    }
+
+    .header {
+      display: flex;
+    }
+
+    .category {
+      /* border: 1px solid black; */
+      border-radius: 30px;
+      margin: 10px;
+      /* background-color: black; */
+      height: 400px;
+      width: 250px;
+      transition: box-shadow 0.5s;
+    }
+
+    .category:hover {
+      box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.5);
+
+    }
+
+    button {
+      background-color: white;
+      padding: 10px;
+      /* padding-left: 20px; */
+      /* padding-right: 20px; */
+      margin: 5px;
+      font-size: 20px;
+      border-radius: 10px;
+      border: 0px solid black;
+      outline: none;
+      font-family: Avenir;
+      width: 220px;
+      transition: background-color 0.25s;
+      transition: color 0.25s;
+    }
+
+    button:hover {
+      color: white;
+      background-color: black;
+
+    }
+
+    .box {
+      padding: 10px;
+    }
+
+    .title {
+      font-size: 25px;
+      font-family: luloClean;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+    }
+
+    .main-body {
+      flex: auto;
+      /* display: flex; */
+    }
+
+    .first-row,
+    .second-row {
+      display: flex;
+      align-items: center;
+  justify-content: center;
+    }
+
+    .first-row {
+      /* height: 300px; */
+    }
+
+    .welcome {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      width: 800px;
+    }
+
+    .background {
+      background-image: url({{url_for('static', filename='diya_tiger_orange.png')}});
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <div class="header">
+      <img style="margin: auto;" src="{{url_for('static', filename='vivum_orange.png')}}" alt="vivum">
+    </div>
+    <div class="body">
+      <div class="free-space"></div>
+      <div class="main-body">
+        <div class="welcome" style="margin: auto; ">
+          Welcome to the VIVUM registration page. If you want to register participants for one or more of events, click the event links below.
+        </div>
+        <div class="first-row">
+          <div class="category" style="height: 300px;">
+          <div class="box">
+            <div class="title"> E-sports </div>
+            <button onclick="window.open('https://forms.gle/4nwP5oWg1hqic8hj9', '_blank')"> FIFA (PS4) </button><br>
+            <button onclick="window.open('https://forms.gle/a96YKGdYCxWpD5XPA', '_blank')"> FIFA (Xbox) </button><br>
+            <button onclick="window.open('https://forms.gle/6bEPpxFtKYdQwMiP8', '_blank')"> Minecraft </button><br>
+            <button onclick="window.open('https://forms.gle/ByRKSQfVvRmdWkc69', '_blank')"> Rocket League </button><br>
+          </div>
+          </div>
+          <div class="category" style="height: 300px;">
+            <div class="box">
+              <div class="title"> Dance </div>
+              <button onclick="window.open('https://forms.gle/AL1V6LPUQy79QsaR7', '_blank')"> Theme it up! </button><br>
+              <button onclick="window.open('https://forms.gle/n8BvG1dFw4B6zFMa6', '_blank')"> Nachedene Saare </button><br>
+              <button onclick="window.open('https://forms.gle/NrtxJcPcW27ns48h7', '_blank')"> Moves like Jagger </button><br>
+            </div>
+          </div>
+          <div class="category" style="height: 300px;">
+            <div class="box">
+              <div class="title"> Art </div>
+              <button onclick="window.open('https://forms.gle/4kTFHz23y6bFWo3V8', '_blank')"> Body Canvas </button><br>
+              <button onclick="window.open('https://forms.gle/7XKAJdGjs7RgsyUB8', '_blank')"> Art it up </button><br>
+              <button onclick="window.open('https://forms.gle/uADhg5KohpSNiHzE8', '_blank')"> Le Recyclage </button><br>
+              <button onclick="window.open('https://forms.gle/e1Gc8z1j1uU4GQST6', '_blank')"> Kidspire </button><br>
+            </div>
+          </div>
+        </div>
+        <div class="second-row">
+          <div class="category">
+            <div class="box">
+              <div class="title"> Drama </div>
+              <button onclick="window.open('https://forms.gle/NSXvmhCiNhMh5WSr5', '_blank')"> Soliloquize </button><br>
+              <button onclick="window.open('https://forms.gle/yZebECoBvAEgThmYA', '_blank')"> Poetry Slam</button><br>
+              <button onclick="window.open('https://forms.gle/UJmVXLva4qd8UwAd9', '_blank')"> Reel it out </button><br>
+              <button onclick="window.open('https://forms.gle/djKNEakWeAHfVvWf9', '_blank')"> Sell up! </button><br>
+              <button onclick="window.open('https://forms.gle/6TPPsKgCxbiFqzYk7', '_blank')"> Mime-it-out </button><br>
+              <button onclick="window.open('https://forms.gle/nfPiaFhQTxcQP8KKA', '_blank')"> Play the Prose </button><br>
+            </div>
+          </div>
+          <div class="category">
+            <div class="box">
+              <div class="title"> Fashion </div>
+              <button onclick="window.open('https://forms.gle/d9658SsWukAY9Tjj9', '_blank')"> VIVUM X MET Gala </button><br>
+              <button onclick="window.open('https://forms.gle/cFBrsDX6xKbucxwX9', '_blank')"> Out of the Box </button><br>
+              <button onclick="window.open('https://forms.gle/MkHJJjGaAeFma5326', '_blank')"> VIVUM Seasons </button><br>
+              <button onclick="window.open('https://forms.gle/4tGZbF2bRyQWYdFs8', '_blank')"> The Walk of Fame </button><br>
+              <button onclick="window.open('https://forms.gle/LnbfUMhEtJh7ki1K7', '_blank')"> “V” for Vintage    </button><br>
+              <button onclick="window.open('https://forms.gle/Nmz2Gri4ZN653u8R6', '_blank')"> The Vivum Vogue Challenge </button><br>
+            </div>
+          </div>
+          <div class="category">
+            <div class="box">
+              <div class="title"> Thought-based </div>
+              <button onclick="window.open('https://forms.gle/j354oy5D3v4F6ceZ9', '_blank')"> Chess </button><br>
+              <div class="title"> Sports </div>
+              <button onclick="window.open('https://forms.gle/JBsL4SM5RXCo8o2o7', '_blank')"> Trojan's Cup </button><br>
+              <div class="title"> Music </div>
+              <button onclick="window.open('https://forms.gle/mYS4phqXPV6NxATs5', '_blank')"> VIVUM Music Festival </button><br>
+              <div class="title"> Cooking </div>
+              <button onclick="window.open('https://forms.gle/Vbqa2cPadWFwoYQn9', '_blank')"> VIVUM X Masterchef </button><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="free-space"></div>
+    </div>
+  </div>
+</body>
+
+</html>
