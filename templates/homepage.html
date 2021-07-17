@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
 <html>
 
 <head>
@@ -9,7 +12,7 @@
     }
 
     body {
-      font-family: "Helvetica";
+      font-family: "Poppins";
       /* padding: 20px; */
       height: 100%;
       display: flex;
@@ -83,6 +86,7 @@
     .text {
       text-align: center;
       color: white;
+      font-family: 'Poppins';
       /* width: 700px; */
       display: flex;
       /* background-color: white; */
@@ -94,9 +98,9 @@
     }
 
     .bg-image {
-      background-image: url("{{url_for('static', filename='diya_tiger_transparency.png')}}");
+      background-image: url("{{url_for('static', filename='Snakevivum2021.jpeg')}}");
       background-repeat: no-repeat;
-      background-size: 50%;
+      background-size: 25%;
       background-position: center;
       /* -webkit-filter: blur(5px); */
       width: 100%;
@@ -112,6 +116,19 @@
       text-align: center;
       padding-bottom: 20px;
     }
+
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          font-family: 'Poppins';
+      opacity: 1; /* Firefox */
+    }
+
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      font-family: 'Poppins';
+    }
+
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      font-family: 'Poppins';
+    }
   </style>
   <title>VIVUM Registration</title>
 </head>
@@ -125,11 +142,11 @@
         <div class="space" style="height: 150px;"></div>
         <div class="form">
           <form action="/forms" method="post" style="text-align: center;">
-            <label><b>School Code</b></label> <br><br>
-            <input name="code" type="text"></input><br><br>
+            <!-- <label><b>School Code</b></label> <br><br> -->
+            <input name="code" type="text" placeholder="School Code"></input><br><br>
             <div class='error'>{{error_message}}</div>
             <button type="submit">
-              <div style="padding: 10px;">Submit</div>
+              <div style="padding: 10px; font-family: 'Poppins'; font-size: medium;">Submit</div>
             </button>
           </form>
         </div>
@@ -137,7 +154,7 @@
         <div class="text">
           <div class="more-space"></div>
           <div style="flex:auto">
-            If you are not registered for VIVUM, please send us a mail at vivum20@tisb.ac.in asking for your school to be registered.
+            If you are not registered for VIVUM, please send us a mail at vivum21@tisb.ac.in asking for your school to be registered.
           </div>
           <div class="more-space"></div>
         </div>
