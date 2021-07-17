@@ -31,7 +31,7 @@ def forms():
         else:
             print(request.form['code'])
             print(str(hash(request.form['code'])))
-            return redirect(url_for('index', error_message='Please enter a valid school code. If you do not have a school code, or would like your school to be sent one, please contact vivum20@tisb.ac.in.'))
+            return redirect(url_for('index', error_message='Please enter a valid school code. If you do not have a school code, or would like your school to be sent one, please contact vivum21@tisb.ac.in.'))
 
 if __name__ == '__main__':
     app.run(debug=True)
