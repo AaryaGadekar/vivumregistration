@@ -25,7 +25,7 @@ def forms():
     if request.method == "GET":
         return redirect(url_for('index'))
     else:
-        ans = str(request.form['code']).encode()
+        ans = str(request.form['code']).encode().strip()
         if hashlib.sha256(ans).hexdigest() in loadHashes():
             return render_template('forms.html', school_name=request.form['code'])
         else:
